@@ -1,33 +1,20 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Person from './Person/Person';
+
 class App extends Component {
-  state = {
-    persons:[
-      {name:'Max', age:23},
-      {name:'Tom', age:22},
-      {name:'Jerry', age:36},
-    ] 
-  }
-
-  switchNameHandler = () =>{
-    console.log('click');
-  }
-
-
   render() {
     return (
       <div className="App">
-       <h1>Hi I am a React</h1>
-       <button onClick ={this.switchNameHandler}>Switch Name</button>
-        <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age}/>
-        <Person name = {this.state.persons[1].name} age = {this.state.persons[1].age}/>
-        <Person name = {this.state.persons[2].name} age = {this.state.persons[2].age}/>
-
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
       </div>
     );
-
-    //return React.createElement('div',{className:'App'},React.createElement('h1',null,'This is test Tutorial for React.js'));
   }
 }
 
